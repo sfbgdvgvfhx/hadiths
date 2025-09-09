@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أحاديث نبوية عشوائية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>أحاديث نبوية عشوائية</h1>
+            <p class="subtitle">تعلّم وتدبّر أحاديث المصطفى ﷺ</p>
+        </header>
+        
+        <div class="categories">
+            <button class="category-btn active" data-source="all">جميع الأحاديث</button>
+            <button class="category-btn" data-source="bukhari">صحيح البخاري</button>
+            <button class="category-btn" data-source="muslim">صحيح مسلم</button>
+            <button class="category-btn" data-source="abudawud">سنن أبي داود</button>
+            <button class="category-btn" data-source="tirmidhi">جامع الترمذي</button>
+        </div>
+        
+        <div class="hadith-container fade-in">
+            <div class="hadith-number">1</div>
+            <p class="hadith-text">اضغط على الزر للحصول على حديث نبوي عشوائي</p>
+            <p class="hadith-source"></p>
+        </div>
+        
+        <div class="loading">
+            <div class="loading-spinner"></div>
+        </div>
+        
+        <div class="controls">
+            <button id="getHadithBtn"><i class="fas fa-sync-alt"></i> عرض حديث جديد</button>
+            <button id="copyHadithBtn" class="action-btn"><i class="fas fa-copy"></i> نسخ الحديث</button>
+            <button id="favoriteBtn" class="action-btn"><i class="fas fa-heart"></i> حفظ في المفضلة</button>
+            <button id="viewFavoritesBtn" class="action-btn"><i class="fas fa-bookmark"></i> عرض المفضلة</button>
+            <button id="shareBtn" class="action-btn"><i class="fas fa-share-alt"></i> مشاركة</button>
+            <button id="explanationBtn" class="explanation-btn"><i class="fas fa-lightbulb"></i> تفسير</button>
+        </div>
+        
+        <div class="info-section">
+            <p>جميع الحقوق، محفوظه موقع أحاديث نبوية - @F_R_3_0_N</p>
+        </div>
+    </div>
+    
+    <div class="favorites-panel">
+        <div class="favorites-header">
+            <h3>الأحاديث المفضلة</h3>
+            <button class="favorites-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="favoritesList"></div>
+    </div>
+    
+    <div class="explanation-panel">
+        <div class="explanation-header">
+            <h3>تفسير الحديث</h3>
+            <button class="explanation-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="explanation-content">
+            <div class="explanation-loading">
+                <div class="loading-spinner"></div>
+                <p>جاري تحضير التفسير...</p>
+            </div>
+            <div class="explanation-text"></div>
+        </div>
+    </div>
+    
+    <div class="overlay"></div>
+    
+    <div class="copy-message">تم نسخ الحديث بنجاح</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
